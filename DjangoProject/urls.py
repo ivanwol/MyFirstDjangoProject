@@ -19,10 +19,10 @@ from django.urls import path, re_path
 from firstapp import views
 
 urlpatterns = [
-    path('categories/<int:id>/<name>/', views.category, name='categories'),
+    # path('categories/<int:id>/<name>/', views.category, name='categories'),
     path('products/', views.products),
     path('products/<int:product_id>/', views.products, name='products'),
     path('users/', views.user),
-    path('users/<int:id>/<name>/', views.user, name='users'),
+    # path('users/<int:id>/<name>/', views.user, name='users'),
     path('admin/', admin.site.urls),
 ]
