@@ -15,3 +15,11 @@ Create Django app:
 
 Run Django Project:
 1) python manage.py runserver.
+
+Create Django migrations:
+1) python manage.py makemigrations,
+2) python manage.py migrate.
+
+Create Super user:
+1) python manage.py createsuperuser.
+
