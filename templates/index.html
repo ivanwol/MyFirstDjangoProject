@@ -5,6 +5,9 @@
     <title>My Django Project</title>
 </head>
 <body>
-    <h1>Welcome to my Django Project</h1>
+    <h1>{{ header }}</h1>
+    <p>Name: {{ user.name }}, age: {{ user.age }}</p>
+    <p>Address: {{ address.0 }}, house: {{ address.1 }}</p>
+    <p>Language: {{ language.0 }}, {{ language.1 }}, {{ language.2 }}</p>
 </body>
 </html>
