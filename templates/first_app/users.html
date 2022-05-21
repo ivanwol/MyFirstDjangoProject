@@ -5,9 +5,10 @@
     <title>My Django Project</title>
 </head>
 <body>
-    <h1>Hello New User!</h1>
-    <h2>{{ username }}</h2>
-    <h3>{{ email }}</h3>
-    <p>{{ password }}</p>
+    <h1>Hello New User({{ name }})!</h1>
+    <p>Your information:</p>
+    <p>Name: {{ name }} Surname: {{ surname }}</p>
+    <p>Age: {{ age }}, where you were bored: {{ locate }}</p>
+    <p>Do you married? {{ married }}</p>
 </body>
 </html>

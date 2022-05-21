@@ -61,11 +61,28 @@ def index(request):
 
 
 def about(request):
-    return TemplateResponse(request, 'first_app/about.html')
+    test = 1
+    pers = {
+        'name': 'Amazon',
+        'count': 100,
+        'when': '27.03.2004',
+        'location': 'Berlin'
+    }
+    data = {
+        'pers': pers,
+        'test': test
+    }
+    # return render(request, 'first_app/about.html', context=data)
+    return TemplateResponse(request, 'first_app/about.html', data)
 
 
 def users(request):
-    data = {'username': 'admin', 'email': 'admin@admin.com', 'password': '****'}
+    name = 'Ivan'
+    surname = 'Ivanow'
+    age = 24
+    locate = 'Ukraine'
+    married = False
+    data = {'name': name, 'surname': surname, 'age': age, 'locate': locate, 'married': married}
     return render(request, 'first_app/users.html', context=data)
 
 
