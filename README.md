@@ -23,3 +23,8 @@ Create Django migrations:
 Create Super user:
 1) python manage.py createsuperuser.
 
+List Template meaning:
+1) BACKEND: ключ который указывает что исзпользуется Django templates.
+2) DIRS: указывает где хранятся Djabgo templates
+3) APP_DIRS: искать только в папке templates?
+4) OPTIONS: опции которые изпользуем в django проекте
