@@ -43,21 +43,21 @@ from django.template.response import TemplateResponse
 #     return render(request, 'first_app/home.html', context=data)
 
 
-def index(request):
-    header = 'Personal data'
-    language = ['English', 'Rushian', 'Ukrainian']
-    user = {
-        'name': 'Ivan',
-        'age': 14,
-    }
-    address = ('Marsel', 17)
-    data = {
-        'header': header,
-        'language': language,
-        'user': user,
-        'address': address
-    }
-    return render(request, 'index.html', context=data)
+# def index(request):
+#     header = 'Personal data'
+#     language = ['English', 'Rushian', 'Ukrainian']
+#     user = {
+#         'name': 'Ivan',
+#         'age': 14,
+#     }
+#     address = ('Marsel', 17)
+#     data = {
+#         'header': header,
+#         'language': language,
+#         'user': user,
+#         'address': address
+#     }
+#     return render(request, 'index.html', context=data)
 
 
 def about(request):
