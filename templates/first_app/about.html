@@ -1,14 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>My Django Project</title>
-</head>
-<body>
-    <h1>Our Company: {{ pers.name }}</h1>
-    <h2>Test: {{ test }}</h2>
-<!--    <p>We have {{ data.count }} workers</p>-->
-<!--    <p>It was born {{ data.when }}</p>-->
-<!--    <p>Our office locates in {{ data.location }}</p>-->
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}About{% endblock title %}
+{% block header %}О сайте{% endblock header %}
+
+{% block content %}
+<p>Hello user</p>
+<p>It's my number: +123456789</p>
+{% endblock content %}
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>My Django Project</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>Our Company: {{ pers.name }}</h1>-->
+<!--    <h2>Test: {{ test }}</h2>-->
+<!--&lt;!&ndash;    <p>We have {{ data.count }} workers</p>&ndash;&gt;-->
+<!--&lt;!&ndash;    <p>It was born {{ data.when }}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;    <p>Our office locates in {{ data.location }}</p>&ndash;&gt;-->
+<!--</body>-->
+<!--</html>-->

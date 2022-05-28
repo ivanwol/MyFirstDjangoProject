@@ -60,37 +60,37 @@ from django.template.response import TemplateResponse
 #     return render(request, 'index.html', context=data)
 
 
-def about(request):
-    test = 1
-    pers = {
-        'name': 'Amazon',
-        'count': 100,
-        'when': '27.03.2004',
-        'location': 'Berlin'
-    }
-    data = {
-        'pers': pers,
-        'test': test
-    }
-    # return render(request, 'first_app/about.html', context=data)
-    return TemplateResponse(request, 'first_app/about.html', data)
-
-
-def users(request):
-    name = 'Ivan'
-    surname = 'Ivanow'
-    age = 24
-    locate = 'Ukraine'
-    married = False
-    data = {'name': name, 'surname': surname, 'age': age, 'locate': locate, 'married': married}
-    return render(request, 'first_app/users.html', context=data)
-
-
-def basket(request):
-    data = {'products': 'meat', 'technics': 'phone', 'money': '250'}
-    return render(request, 'first_app/basket.html', context=data)
-
-
-def login(request):
-    data = {'user_username': 'admin', 'user_password': '********', 'terms': 'We dont use your information...'}
-    return render(request, 'first_app/login.html', context=data)
+# def about(request):
+#     test = 1
+#     pers = {
+#         'name': 'Amazon',
+#         'count': 100,
+#         'when': '27.03.2004',
+#         'location': 'Berlin'
+#     }
+#     data = {
+#         'pers': pers,
+#         'test': test
+#     }
+#     # return render(request, 'first_app/about.html', context=data)
+#     return TemplateResponse(request, 'first_app/about.html', data)
+#
+#
+# def users(request):
+#     name = 'Ivan'
+#     surname = 'Ivanow'
+#     age = 24
+#     locate = 'Ukraine'
+#     married = False
+#     data = {'name': name, 'surname': surname, 'age': age, 'locate': locate, 'married': married}
+#     return render(request, 'first_app/users.html', context=data)
+#
+#
+# def basket(request):
+#     data = {'products': 'meat', 'technics': 'phone', 'money': '250'}
+#     return render(request, 'first_app/basket.html', context=data)
+#
+#
+# def login(request):
+#     data = {'user_username': 'admin', 'user_password': '********', 'terms': 'We dont use your information...'}
+#     return render(request, 'first_app/login.html', context=data)

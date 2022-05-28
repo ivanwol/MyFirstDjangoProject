@@ -18,7 +18,7 @@ from django.urls import path, re_path
 from django.views.generic import TemplateView
 from firstapp import views
 
-urlpatterns = [
+# urlpatterns = [
     # # path('categories/<int:id>/<name>/', views.category, name='categories'),
     # path('products/', views.products),
     # path('products/<int:product_id>/', views.products, name='products'),
@@ -29,26 +29,31 @@ urlpatterns = [
     # path('about/', views.about),
     # path('details/', views.details),
     # path('contacts/', views.contacts),
-    path('', TemplateView.as_view(template_name='index.html', extra_context={
-        'name': 'Ivan',
-        'age': 14,
-        'address': ['Marsell', 46],
-        'language': ['Ukrainian', 'English', 'Rushian']
-    })),
-    path('about/', views.about),
-    # path('users/', views.users),
-    path('users/', TemplateView.as_view(template_name='first_app/users.html', extra_context={
-        'name': 'Ivan',
-        'surname': 'Ivanow',
-        'age': 14,
-        'locate': 'Ukraine',
-        'married': False,
-    })),
-    path('basket/', views.basket),
-    path('login/', TemplateView.as_view(template_name='first_app/login.html', extra_context={
-        'user_username': 'Admin',
-        'user_password': '*********',
-        'terms': 'We don\'t steel yout info...'
-    })),
-    # path('login/', views.login),
+    # path('', TemplateView.as_view(template_name='index.html', extra_context={
+    #     'name': 'Ivan',
+    #     'age': 14,
+    #     'address': ['Marsell', 46],
+    #     'language': ['Ukrainian', 'English', 'Rushian']
+    # })),
+    # path('about/', views.about),
+    # # path('users/', views.users),
+    # path('users/', TemplateView.as_view(template_name='first_app/users.html', extra_context={
+    #     'name': 'Ivan',
+    #     'surname': 'Ivanow',
+    #     'age': 14,
+    #     'locate': 'Ukraine',
+    #     'married': False,
+    # })),
+    # path('basket/', views.basket),
+    # path('login/', TemplateView.as_view(template_name='first_app/login.html', extra_context={
+    #     'user_username': 'Admin',
+    #     'user_password': '*********',
+    #     'terms': 'We don\'t steel yout info...'
+#     })),
+#     # path('login/', views.login),
+# ]
+urlpatterns = [
+    path('', TemplateView.as_view(template_name='index.html')),
+    path('about/', TemplateView.as_view(template_name='first_app/about.html')),
+    path('users/', TemplateView.as_view(template_name='first_app/users.html')),
 ]

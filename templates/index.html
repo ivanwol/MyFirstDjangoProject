@@ -1,16 +1,19 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'CSS/styles.css'%}"/>
-    <title>My Django Project</title>
-</head>
-<body>
-    <img src="{% static 'images/basic_index_image.jpg'%}" alt="Download error image">
-    <h1>Index page</h1>
-    <p>Name: {{ name }}, age: {{ age }}</p>
-    <p>Address: {{ address.0 }}, house: {{ address.1 }}</p>
-    <p>Language: {{ language.0 }}, {{ language.1 }}, {{ language.2 }}</p>
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Index{% endblock title %}
+{% block header %}Главная{% endblock header %}
+<!--<!DOCTYPE html>-->
+<!--{% load static %}-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--&lt;!&ndash;    <link rel="stylesheet" href="{% static 'CSS/styles.css'%}"/>&ndash;&gt;-->
+<!--&lt;!&ndash;    <title>My Django Project</title>&ndash;&gt;-->
+<!--</head>-->
+<!--<body>-->
+<!--&lt;!&ndash;    <img src="{% static 'images/basic_index_image.jpg'%}" alt="Download error image">&ndash;&gt;-->
+<!--&lt;!&ndash;    <h1>Index page</h1>&ndash;&gt;-->
+<!--&lt;!&ndash;    <p>Name: {{ name }}, age: {{ age }}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;    <p>Address: {{ address.0 }}, house: {{ address.1 }}</p>&ndash;&gt;-->
+<!--&lt;!&ndash;    <p>Language: {{ language.0 }}, {{ language.1 }}, {{ language.2 }}</p>&ndash;&gt;-->
+<!--</body>-->
+<!--</html>-->

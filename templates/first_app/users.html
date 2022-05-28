@@ -1,14 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>My Django Project</title>
-</head>
-<body>
-    <h1>Hello New User({{ name }})!</h1>
-    <p>Your information:</p>
-    <p>Name: {{ name }} Surname: {{ surname }}</p>
-    <p>Age: {{ age }}, where you were bored: {{ locate }}</p>
-    <p>Do you married? {{ married }}</p>
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}User's page{% endblock title %}
+{% block header %}Hello user{% endblock header %}
+{% block content %}
+<h3>User's profile:</h3>
+<div>Username: Admin</div>
+<p>password: ****</p>
+{% endblock content %}
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>My Django Project</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>Hello New User({{ name }})!</h1>-->
+<!--    <p>Your information:</p>-->
+<!--    <p>Name: {{ name }} Surname: {{ surname }}</p>-->
+<!--    <p>Age: {{ age }}, where you were bored: {{ locate }}</p>-->
+<!--    <p>Do you married? {{ married }}</p>-->
+<!--</body>-->
+<!--</html>-->
