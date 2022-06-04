@@ -53,7 +53,9 @@ from firstapp import views
 #     # path('login/', views.login),
 # ]
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='index.html')),
+    path('', views.index),
     path('about/', TemplateView.as_view(template_name='first_app/about.html')),
     path('users/', TemplateView.as_view(template_name='first_app/users.html')),
+    path('basket/', views.basket),
+    path('login/', views.login),
 ]

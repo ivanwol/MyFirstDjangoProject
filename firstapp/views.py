@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect, HttpResponsePermanentRedirect
 from django.template.response import TemplateResponse
+from .forms import UserForm, ProductForm, LoginForm
 
 
 # def products(request, product_id=0):
@@ -94,3 +95,27 @@ from django.template.response import TemplateResponse
 # def login(request):
 #     data = {'user_username': 'admin', 'user_password': '********', 'terms': 'We dont use your information...'}
 #     return render(request, 'first_app/login.html', context=data)
+
+# def index(request):
+#     data = {
+#         "n": -10,
+#     }
+#     return render(request, 'index.html', context=data)
+
+# def index(request):
+#     country = ['Ukraine', 'England', 'Bulgaria']
+#     return render(request, 'index.html', context={'country': country})
+
+def index(request):
+    userform = UserForm()
+    return render(request, 'index.html', {'form': userform})
+
+
+def basket(request):
+    productform = ProductForm()
+    return render(request, 'first_app/basket.html', {'form': productform})
+
+
+def login(request):
+    loginform = LoginForm()
+    return render(request, 'first_app/login.html', {'form': loginform})

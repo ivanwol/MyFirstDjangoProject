@@ -28,3 +28,27 @@ List Template meaning:
 2) DIRS: указывает где хранятся Djabgo templates
 3) APP_DIRS: искать только в папке templates?
 4) OPTIONS: опции которые изпользуем в django проекте
+
+Tag now:
+1) Y - year(4 symbols)
+2) F - month(full)
+3) j - day
+4) N - month(cut version)
+5) P - time
+6) y - year(2 symbols)
+
+HTML дает возможность работать с блоком if с помощью тегов:
+    {% if n > 0 %}
+        <p>Число положительное</p>
+    {% elif n < 0 %}
+        <p>Число отрицательное</p>
+    {% else %}
+        <p>Что-то пошло не так</p>
+    {% endif %}
+
+В HTML есть цикл for:
+    <ul>
+        {% for i in country %}
+        <li>{{ i }}</li>
+        {% endfor %}
+    </ul>
