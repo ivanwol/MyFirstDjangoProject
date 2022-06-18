@@ -5,8 +5,16 @@
     <title>My Django Project</title>
 </head>
 <body>
-    <h1>My Home Page</h1>
-    <h2>{{ header }}</h2>
-    <p>{{ message }}</p>
+    {{ n }}
+    {% if n > 0 %}
+        <p>Число положительное</p>
+    {% elif n < 0 %}
+        <p>Число отрицательное</p>
+    {% else %}-->
+        <p>Число равно нулю</p>
+    {% endif %}
+<!--    <h1>My Home Page</h1>-->
+<!--    <h2>{{ header }}</h2>-->
+<!--    <p>{{ message }}</p>-->
 </body>
 </html>

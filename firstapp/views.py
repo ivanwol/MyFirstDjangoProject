@@ -106,16 +106,21 @@ from .forms import UserForm, ProductForm, LoginForm
 #     country = ['Ukraine', 'England', 'Bulgaria']
 #     return render(request, 'index.html', context={'country': country})
 
-def index(request):
-    userform = UserForm()
-    return render(request, 'index.html', {'form': userform})
-
-
-def basket(request):
-    productform = ProductForm()
-    return render(request, 'first_app/basket.html', {'form': productform})
-
-
-def login(request):
-    loginform = LoginForm()
-    return render(request, 'first_app/login.html', {'form': loginform})
+# def index(request):
+#     userform = UserForm()
+#     return render(request, 'index.html', {'form': userform})
+#
+#
+# def basket(request):
+#     productform = ProductForm()
+#     return render(request, 'first_app/basket.html', {'form': productform})
+#
+#
+# def login(request):
+#     loginform = LoginForm()
+#     return render(request, 'first_app/login.html', {'form': loginform})
+#
+#
+# def home(request):
+#     data = {'n': 15}
+#     return render(request, 'first_app/home.html', context=data)

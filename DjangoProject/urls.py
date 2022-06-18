@@ -18,6 +18,7 @@ from django.urls import path, re_path
 from django.views.generic import TemplateView
 from firstapp import views
 
+
 # urlpatterns = [
     # # path('categories/<int:id>/<name>/', views.category, name='categories'),
     # path('products/', views.products),
@@ -52,10 +53,16 @@ from firstapp import views
 #     })),
 #     # path('login/', views.login),
 # ]
+# urlpatterns = [
+    # path('', views.index),
+    # path('about/', TemplateView.as_view(template_name='first_app/about.html')),
+    # path('users/', TemplateView.as_view(template_name='first_app/users.html')),
+    # path('basket/', views.basket),
+    # path('login/', views.login),
+    # path('home/', views.home),
+# ]
 urlpatterns = [
-    path('', views.index),
-    path('about/', TemplateView.as_view(template_name='first_app/about.html')),
-    path('users/', TemplateView.as_view(template_name='first_app/users.html')),
-    path('basket/', views.basket),
-    path('login/', views.login),
+    path('user/about/', TemplateView.as_view(template_name='user/about_user.html')),
+    path('user/about/refactor/', TemplateView.as_view(template_name='user/refactor_user.html')),
+    path('user/about/refactor/delete/',TemplateView.as_view(template_name='user/delete_user.html')),
 ]
