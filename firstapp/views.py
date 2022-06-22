@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect, HttpResponsePermanentRedirect
 from django.template.response import TemplateResponse
-from .forms import UserForm, ProductForm, LoginForm
+from .forms import UserForm
 
 
 # def products(request, product_id=0):
@@ -124,3 +124,19 @@ from .forms import UserForm, ProductForm, LoginForm
 # def home(request):
 #     data = {'n': 15}
 #     return render(request, 'first_app/home.html', context=data)
+
+#
+# def index(request):
+#     userform = UserForm()
+#     return render(request, 'user_index.html', {'form': userform})
+
+
+def index(request):
+    if request.method == 'POST':
+        name = request.POST.get("name")
+        age = request.POST.get("age")
+        work = request.POST.get("work")
+        return HttpResponse(f'<h1>User Page</h1> <h2>Name: {name}, Age: {age}, Work: {work}</h2>')
+    else:
+        userform = UserForm()
+        return render(request, 'user_index.html', {'form': userform})

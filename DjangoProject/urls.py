@@ -62,7 +62,8 @@ from firstapp import views
     # path('home/', views.home),
 # ]
 urlpatterns = [
-    path('user/about/', TemplateView.as_view(template_name='user/about_user.html')),
-    path('user/about/refactor/', TemplateView.as_view(template_name='user/refactor_user.html')),
-    path('user/about/refactor/delete/',TemplateView.as_view(template_name='user/delete_user.html')),
+    # path('user/about/', TemplateView.as_view(template_name='user/about_user.html')),
+    # path('user/about/refactor/', TemplateView.as_view(template_name='user/refactor_user.html')),
+    # path('user/about/refactor/delete/',TemplateView.as_view(template_name='user/delete_user.html')),
+    path('', views.index),
 ]
